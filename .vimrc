@@ -9,7 +9,7 @@ set number
 :map <C-t> :tabnew<cr>
 :map <C-S-tab> :tabprevious<cr>
 :map <C-tab> :tabnext<cr>
-":map <C-S-w> :tabclose<cr>
+:map <tc> :tabclose<cr>
 :imap <C-S-tab> <ESC>:tabprevious<cr>i
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
@@ -30,7 +30,7 @@ set nocompatible
 filetype plugin indent on
 filetype on
 
-:map <C-o> :FuzzyFinderFile<cr>
+:map <C-o> :FuzzyFinderTextMate<cr>
 nnoremap <silent> <F11> :YRShow<CR>
 autocmd BufNewFile,BufRead *.html.erb set ft=eruby.html
 au Bufread,BufNewFile *.feature set filetype=gherkin

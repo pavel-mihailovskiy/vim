@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/eugene/projects/scoutondemand/app/views/coach_catalog'
 let g:netrw_dirhist_2='/home/eugene/projects/scoutondemand/app/views/engagements'
+let g:netrw_dirhist_3='/home/eugene/projects/scoutondemand/app'
+let g:netrw_dirhist_4='/home/eugene/projects/scoutondemand/app/helpers'
+let g:netrw_dirhist_5='/home/eugene/projects/scoutondemand/app'
+let g:netrw_dirhist_6='/home/eugene/projects/scoutondemand/app/helpers'
+let g:netrw_dirhist_7='/home/eugene/projects/scoutondemand/app'
+let g:netrw_dirhist_8='/home/eugene/projects/scoutondemand/app/models'
