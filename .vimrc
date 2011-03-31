@@ -1,5 +1,6 @@
 colo desert
-syntax on
+syntax enable                     " Turn on syntax highlighting.
+filetype plugin indent on         " Turn on file type detection.
 set expandtab ts=2 sw=2 ai
 set number
 
@@ -9,7 +10,7 @@ set number
 :map <C-t> :tabnew<cr>
 :map <C-S-tab> :tabprevious<cr>
 :map <C-tab> :tabnext<cr>
-:map <tc> :tabclose<cr>
+":map <tc> :tabclose<cr>
 :imap <C-S-tab> <ESC>:tabprevious<cr>i
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
@@ -27,11 +28,24 @@ set number
 :let Grep_Default_Filelist = '*.*' 
 :let Grep_Skip_Files = '*.log all.css all.js' 
 set nocompatible
-filetype plugin indent on
-filetype on
 
-:map <C-o> :FuzzyFinderTextMate<cr>
+:map <C-o> :FuzzyFinderTextMate<cr> 
 nnoremap <silent> <F11> :YRShow<CR>
 autocmd BufNewFile,BufRead *.html.erb set ft=eruby.html
 au Bufread,BufNewFile *.feature set filetype=gherkin
 au! Syntax gherkin source ~/.vim/cucumber.vim
+
+set backspace=indent,eol,start    " Intuitive backspacing.
+set incsearch                     " Highlight matches as you type.
+set hlsearch                      " Highlight matches.
+set scrolloff=3                   " Show 3 lines of context around the cursor.
+set visualbell                    " No beeping.
+set nobackup                      " Don't make a backup before overwriting a file.
+set nowritebackup                 " And again.
+set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+
+
+:vmap <Tab> >gv                   " Indent in the visual mode (confilct with the snippet)
+:vmap <S-Tab> <gv                 " Indent back in the visual mode
+
+:ab teh the                       " abriviation (will change teh to the automatically)
