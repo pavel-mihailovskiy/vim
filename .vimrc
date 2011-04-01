@@ -42,10 +42,11 @@ set scrolloff=3                   " Show 3 lines of context around the cursor.
 set visualbell                    " No beeping.
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set noswapfile
+"set directory=$HOME/.vim/tmp/  " Keep swap files in one location
 
 
 :vmap <Tab> >gv                   " Indent in the visual mode (confilct with the snippet)
 :vmap <S-Tab> <gv                 " Indent back in the visual mode
 
-:ab teh the                       " abriviation (will change teh to the automatically)
+:ab teh the
