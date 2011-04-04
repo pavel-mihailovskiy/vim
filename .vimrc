@@ -14,6 +14,7 @@ set number
 :imap <C-S-tab> <ESC>:tabprevious<cr>i
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
+:map <C-e> <ESC>:q<cr>
 
 :nnoremap <A-j> :m+<CR>==
 :nnoremap <A-k> :m-2<CR>==
