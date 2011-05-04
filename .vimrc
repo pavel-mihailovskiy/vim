@@ -24,7 +24,7 @@ set number
 :vnoremap <A-k> :m-2<CR>gv=gv
 
 :map <C-s> :w<cr>
-:map <C-a> <gg=G>
+:map <C-a> <esc>ggVG<end>
 :map <C-f> :Rgrep<cr>
 :let Grep_Default_Filelist = '*.*' 
 :let Grep_Skip_Files = '*.log all.css all.js' 
@@ -52,3 +52,4 @@ set novisualbell
 :vmap <S-Tab> <gv                 " Indent back in the visual mode
 
 :ab teh the
+:highlight Pmenu guifg=#FFFFFF guibg=#827348
