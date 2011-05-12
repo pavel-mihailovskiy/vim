@@ -47,6 +47,7 @@ set noswapfile
 set novisualbell
 "set directory=$HOME/.vim/tmp/  " Keep swap files in one location
 
+:set autoread                     " autorealod changed files 
 
 :vmap <Tab> >gv                   " Indent in the visual mode (confilct with the snippet)
 :vmap <S-Tab> <gv                 " Indent back in the visual mode
