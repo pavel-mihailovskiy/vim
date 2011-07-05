@@ -1,7 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/eugene/projects/scoutondemand/public'
-let g:netrw_dirhist_2='/home/eugene/projects/scoutondemand/public/javascripts'
-let g:netrw_dirhist_3='/home/eugene/projects/scoutondemand/config'
-let g:netrw_dirhist_4='/home/eugene/projects/scoutondemand/config/initializers'
-let g:netrw_dirhist_5='/home/eugene/projects/scoutondemand/app/controllers'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/eugene/projects/scoutondemand/config'

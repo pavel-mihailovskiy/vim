@@ -15,6 +15,8 @@ set number
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
 :map <C-e> <ESC>:q<cr>
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <silent> <tab> :BufExplorer<CR>
 
 :nnoremap <A-j> :m+<CR>==
 :nnoremap <A-k> :m-2<CR>==
