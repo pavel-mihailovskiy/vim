@@ -4,6 +4,7 @@ filetype plugin indent on         " Turn on file type detection.
 set expandtab ts=2 sw=2 ai
 set number
 
+set cindent
 :nmap <C-S-tab> :tabprevious<cr>
 :nmap <C-tab> :tabnext<cr>
 :nmap <C-t> :tabnew<cr>
@@ -14,7 +15,7 @@ set number
 :imap <C-S-tab> <ESC>:tabprevious<cr>i
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
-:map <C-e> <ESC>:q<cr>
+:map <C-e> <ESC>:q!<cr>
 :nnoremap <F5> :buffers<CR>:buffer<Space>
 nnoremap <silent> <tab> :BufExplorer<CR>
 
