@@ -57,3 +57,5 @@ set novisualbell
 
 :ab teh the
 :highlight Pmenu guifg=#FFFFFF guibg=#827348
+
+:map <F5> :ruby finder.rescan!<cr>
