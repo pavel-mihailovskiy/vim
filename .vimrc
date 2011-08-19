@@ -26,6 +26,7 @@ nnoremap <silent> <tab> :BufExplorer<CR>
 :vnoremap <A-k> :m-2<CR>gv=gv
 
 :map <C-s> :w<cr>
+:imap <C-s> <ESC>:w<cr>
 :map <C-a> <esc>ggVG<end>
 :map <C-f> :Rgrep<cr>
 :let Grep_Default_Filelist = '*.*' 
