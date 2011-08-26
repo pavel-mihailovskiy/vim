@@ -33,7 +33,7 @@ nnoremap <silent> <tab> :BufExplorer<CR>
 :let Grep_Skip_Files = '*.log all.css all.js' 
 set nocompatible
 
-:map <C-o> :FuzzyFinderTextMate<cr> 
+:map <A-S-o> :FuzzyFinderTextMate<cr>
 nnoremap <silent> <F11> :YRShow<CR>
 autocmd BufNewFile,BufRead *.html.erb set ft=eruby.html
 au Bufread,BufNewFile *.feature set filetype=gherkin
@@ -52,10 +52,12 @@ set novisualbell
 
 :set autoread                     " autorealod changed files 
 
-:vmap <Tab> >gv                   " Indent in the visual mode (confilct with the snippet)
-:vmap <S-Tab> <gv                 " Indent back in the visual mode
-
 :ab teh the
 :highlight Pmenu guifg=#FFFFFF guibg=#827348
 
-:map <F5> :ruby finder.rescan!<cr>
+:map <F5> :ruby finder.rescan!<cr> " fuzzyfinder refresh
+:map <F6> :source $MYVIMRC<cr>     " reload .vimrc settings
+
+" native vim tree settings
+let g:netrw_altv=1
+let g:netrw_winsize=180
