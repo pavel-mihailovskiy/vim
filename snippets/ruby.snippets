@@ -268,7 +268,7 @@ snippet rsrt
 	response.should render_template(:${1:index})
 snippet rsrd
 	response.should redirect_to(${1:users_path})
-snippet as
+snippet ass
 	assigns(:${1:user})${2}
 snippet it
 	it "should ${1:test something}" do
@@ -276,3 +276,11 @@ snippet it
 	end
 snippet let
 	let(:${1:user}) {Factory.create(:${2:user})}
+snippet Fc
+	Factory.create(:${1:user})${2}
+snippet Fb
+	Factory.build(:${1:user})${2}
+snippet Fd
+	Factory.define :${1:user} do |${2:u}|
+		${3}
+	end

@@ -61,3 +61,8 @@ set novisualbell
 " native vim tree settings
 let g:netrw_altv=1
 let g:netrw_winsize=180
+
+" rails.vim shortcuts
+:map gv :Rview<cr>
+:map gc :Rcontroller<cr>
+:map gm :Rmodel<cr>
