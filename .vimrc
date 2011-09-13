@@ -11,7 +11,7 @@ set cindent
 :map <C-t> :tabnew<cr>
 :map <C-S-tab> :tabprevious<cr>
 :map <C-tab> :tabnext<cr>
-":map <tc> :tabclose<cr>
+:map <tc> :tabclose<cr>
 :imap <C-S-tab> <ESC>:tabprevious<cr>i
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
@@ -33,7 +33,11 @@ nnoremap <silent> <tab> :BufExplorer<CR>
 :let Grep_Skip_Files = '*.log all.css all.js' 
 set nocompatible
 
-:map <A-S-o> :FuzzyFinderTextMate<cr>
+:map <A-S-i> :FuzzyFinderTextMate<cr>
+:map <A-S-o> :CommandT<cr>
+let g:CommandTCursorRightMap=['<C-r>']
+let g:CommandTAcceptSelectionTabMap=['<C-l>']
+let g:CommandTMatchWindowAtTop=1
 nnoremap <silent> <F11> :YRShow<CR>
 autocmd BufNewFile,BufRead *.html.erb set ft=eruby.html
 au Bufread,BufNewFile *.feature set filetype=gherkin
@@ -55,8 +59,9 @@ set novisualbell
 :ab teh the
 :highlight Pmenu guifg=#FFFFFF guibg=#827348
 
-:map <F5> :ruby finder.rescan!<cr> " fuzzyfinder refresh
-:map <F6> :source $MYVIMRC<cr>     " reload .vimrc settings
+:map <F5> :ruby finder.rescan!<cr>          " fuzzyfinder refresh
+:map <F6> :source $MYVIMRC<cr>              " reload .vimrc settings
+:map <F7> :call ReloadAllSnippets()<cr>     " reload all snippets
 
 " native vim tree settings
 let g:netrw_altv=1
