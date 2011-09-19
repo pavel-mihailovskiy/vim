@@ -71,3 +71,12 @@ let g:netrw_winsize=180
 :map gv :Rview<cr>
 :map gc :Rcontroller<cr>
 :map gm :Rmodel<cr>
+
+" nerdtree plugin
+:map <F2> :NERDTreeTabsToggle \| :silent NERDTreeMirror<CR>
+:map <C-n> :NERDTreeFind<cr>
+
+
+
+" temp shorcuts
+:map <F3> :!touch tmp/restart.txt<cr><cr>
