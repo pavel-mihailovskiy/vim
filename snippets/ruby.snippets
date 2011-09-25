@@ -233,7 +233,7 @@ snippet do
 		${2}
 	end
 snippet :
-	:${1:key} => ${2:"value"}${3}
+	:${1:key} => ${2:"value"}
 snippet bm-
 	TESTS = ${1:10_000}
 	Benchmark.bmbm do |results|
@@ -262,12 +262,6 @@ snippet proc
 	proc { |${1:args}| ${2} }
 snippet pry
 	binding.pry
-snippet rl
-	render :layout => '${1:application}'
-snippet rp
-	render :partial => :${1:user}
-snippet ra
-	render :action => :${1:index}
 # --------------------------------------------------  RSPEC  ----------------------------------------------------------
 
 snippet rsrt
@@ -276,6 +270,14 @@ snippet rsrd
 	response.should redirect_to(${1:users_path})
 snippet ass
 	assigns(:${1:user})${2}
+snippet des
+	describe ${1:User} do
+	  before do
+			${2}
+		end
+
+		${3}
+	end
 snippet it
 	it "should ${1:test something}" do
 		${2:test body}
@@ -290,3 +292,21 @@ snippet Fd
 	Factory.define :${1:user} do |${2:u}|
 		${3}
 	end
+# --------------------------------------------------  CONTROLLERS ----------------------------------------------------------
+snippet rl
+	render :layout => '${1:application}'
+snippet rp
+	render :partial => :${1:user}
+snippet ra
+	render :action => :${1:index}
+snippet rnt
+	render :nothing => true
+snippet bf
+	before_filter ${1}
+# --------------------------------------------------  MODELS ----------------------------------------------------------
+snippet bt
+	belongs_to :${1:category}
+snippet hm
+	has_many :${1:tasks}
+snippet hmt
+	has_many :${1:tasks}, :through => :${2:categories}

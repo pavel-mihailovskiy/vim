@@ -73,8 +73,8 @@ let g:netrw_winsize=180
 :map gm :Rmodel<cr>
 
 " nerdtree plugin
-:map <F2> :NERDTreeTabsToggle \| :silent NERDTreeMirror<CR>
-:map <C-n> :NERDTreeFind<cr>
+:map <F2> :NERDTreeTabsToggle<cr>
+:map gt :NERDTreeFind<cr>
 
 
 
