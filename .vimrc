@@ -55,6 +55,7 @@ set novisualbell
 :set autoread                     " autorealod changed files 
 
 :highlight Pmenu guifg=#FFFFFF guibg=#827348
+:hi Normal guibg=#1b1b1b
 
 " autocorrections
 :ab teh the
