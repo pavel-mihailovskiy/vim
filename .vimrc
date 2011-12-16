@@ -43,7 +43,7 @@ au! Syntax gherkin source ~/.vim/cucumber.vim
 set backspace=indent,eol,start    " Intuitive backspacing.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
-set scrolloff=3                   " Show 3 lines of context around the cursor.
+set scrolloff=10                  " Show 3 lines of context around the cursor.
 set visualbell                    " No beeping.
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
@@ -99,3 +99,9 @@ let g:ruby_debugger_default_script = 'script/rails s'
 :set guifont=Monospace\ 11
 nmap <F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (submatch(1) - 1)', '')<CR>
 nmap <S-F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (submatch(1) + 1)', '')<CR>
+
+
+" visualization shortcuts
+
+:map sw bve
+:map sl _vg_
