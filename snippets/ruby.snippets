@@ -270,7 +270,7 @@ snippet rp
 
 snippet rsrt
 	response.should render_template(:${1:index})
-snippet rsrd
+snippet rsrdt
 	response.should redirect_to(${1:users_path})
 snippet ass
 	assigns(:${1:user})${2}
@@ -296,9 +296,13 @@ snippet Fd
 	Factory.define :${1:user} do |${2:u}|
 		${3}
 	end
+snippet rsbs
+	response.should be_success
 # --------------------------------------------------  CONTROLLERS ----------------------------------------------------------
 snippet rl
 	render :layout => '${1:application}'
+snippet rlf
+	render :layout => false
 snippet rp
 	render :partial => :${1:user}
 snippet ra
@@ -314,3 +318,7 @@ snippet hm
 	has_many :${1:tasks}
 snippet hmt
 	has_many :${1:tasks}, :through => :${2:categories}
+snippet bs
+	before_save :${1:action}
+snippet as
+	after_save :${1:action}
