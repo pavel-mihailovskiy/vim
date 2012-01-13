@@ -55,7 +55,7 @@ set novisualbell
 :set autoread                     " autorealod changed files 
 
 :highlight Pmenu guifg=#FFFFFF guibg=#827348
-:hi Normal guibg=#1b1b1b
+:hi Normal guibg=#0e0e0e
 
 " autocorrections
 :ab teh the
@@ -105,3 +105,6 @@ nmap <S-F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (subma
 
 :map sw bve
 :map sl _vg_
+
+:map :Tabular Tab
+" restart mongrel server
