@@ -50,8 +50,8 @@ set nowritebackup                 " And again.
 set noswapfile
 set novisualbell
 "set directory=$HOME/.vim/tmp/  " Keep swap files in one location
-
-:map <F6> :source $MYVIMRC<cr>              " reload .vimrc settings
+" reload .vimrc settings
+:map <F6> :source $MYVIMRC<cr>
 :set autoread                     " autorealod changed files 
 
 :highlight Pmenu guifg=#FFFFFF guibg=#827348
@@ -63,7 +63,8 @@ set novisualbell
 
 " FuzzyFinder plugin settings
 :map <A-S-i> :FuzzyFinderTextMate<cr>
-:map <F5> :ruby finder.rescan!<cr>          " fuzzyfinder refresh
+" fuzzyfinder refresh
+:map <F5> :ruby finder.rescan!<cr>
 
 " CommandT plugin settings
 set wildignore+=*.sql,*.log,*.git
@@ -77,7 +78,8 @@ map <F9> :CommandTFlush<cr>
 nnoremap <silent> <F11> :YRShow<CR>
 
 " Rails.vim plugin settings
-:map <F7> :call ReloadAllSnippets()<cr>     " reload all snippets
+" reload all snippets
+:map <F7> :call ReloadAllSnippets()<cr>
 :map gv :Rview<cr>
 :map gc :Rcontroller<cr>
 :map gm :Rmodel<cr>
@@ -100,8 +102,10 @@ let g:ruby_debugger_default_script = 'script/rails s'
 nmap <F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (submatch(1) - 1)', '')<CR>
 nmap <S-F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (submatch(1) + 1)', '')<CR>
 
-
 " visualization shortcuts
 
 :map sw bve
 :map sl _vg_
+:map " g_
+
+:map <C-[> <ESC>
