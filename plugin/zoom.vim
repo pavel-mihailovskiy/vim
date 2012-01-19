@@ -7,9 +7,6 @@ command! -narg=0 ZoomIn    :call s:ZoomIn()
 command! -narg=0 ZoomOut   :call s:ZoomOut()
 command! -narg=0 ZoomReset :call s:ZoomReset()
 
-nmap = :ZoomIn<CR>
-nmap - :ZoomOut<CR>
-
 function! s:ZoomIn()
   let s:fsize += 1
   let &guifont = 'Monospace '.s:fsize

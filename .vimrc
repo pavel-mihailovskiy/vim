@@ -16,7 +16,9 @@ set cindent
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
 :map <C-e> <ESC>:q!<cr>
-nnoremap <silent> <tab> :BufExplorer<CR>
+"nnoremap <silent> <tab> :BufExplorer<CR>
+nnoremap <silent> <tab> :Tablisttoggle<CR>
+
 
 " move up and down lines with C-j and C-k (also works in visual mode)
 :nnoremap <A-j> :m+<CR>==
@@ -55,7 +57,7 @@ set novisualbell
 :set autoread                     " autorealod changed files 
 
 :highlight Pmenu guifg=#FFFFFF guibg=#827348
-:hi Normal guibg=#1b1b1b
+:hi Normal guibg=#0e0e0e
 
 " autocorrections
 :ab teh the
@@ -109,3 +111,5 @@ nmap <S-F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (subma
 :map " g_
 
 :map <C-[> <ESC>
+
+:map :Tabular Tab
