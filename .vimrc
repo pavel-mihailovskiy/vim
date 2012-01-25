@@ -112,4 +112,4 @@ nmap <S-F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (subma
 
 :map <C-[> <ESC>
 
-:map :Tabular Tab
+:vnoremap <tab> :Tabulariz /
