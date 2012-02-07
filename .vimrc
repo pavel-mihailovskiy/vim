@@ -113,3 +113,11 @@ nmap <S-F12> :let &guifont = substitute(&guifont, ':h\(\d\+\)', '\=":h" . (subma
 :map <C-[> <ESC>
 
 :vnoremap <tab> :Tabulariz /
+
+
+" to start vim maximized
+function Maximize_Window()
+  silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+endfunction
+
+au GUIEnter * call Maximize_Window()"
