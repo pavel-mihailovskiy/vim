@@ -6,19 +6,13 @@ set number
 set ignorecase
 
 set cindent
-:nmap <C-S-tab> :tabprevious<cr>
-:nmap <C-tab> :tabnext<cr>
-:nmap <C-t> :tabnew<cr>
-:map <C-t> :tabnew<cr>
-:map <C-S-tab> :tabprevious<cr>
-:map <C-tab> :tabnext<cr>
-:map <tc> :tabclose<cr>
-:imap <C-S-tab> <ESC>:tabprevious<cr>i
-:imap <C-tab> <ESC>:tabnext<cr>i
-:imap <C-t> <ESC>:tabnew<cr>
+:map tp :tabprevious<cr>
+:map tn :tabnext<cr>
+:map tl :Tablisttoggle<CR>
+:map tc :tabclose<cr>
+:map tt :tabnew<cr>
 :map <C-e> <ESC>:q!<cr>
 nnoremap <silent> <C-b> :BufExplorer<CR>
-nnoremap <silent> <tab> :Tablisttoggle<CR>
 
 
 " move up and down lines with C-j and C-k (also works in visual mode)
