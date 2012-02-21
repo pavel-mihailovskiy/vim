@@ -3,6 +3,7 @@ syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 set expandtab ts=2 sw=2 ai
 set number
+set ignorecase
 
 set cindent
 :nmap <C-S-tab> :tabprevious<cr>
@@ -16,7 +17,7 @@ set cindent
 :imap <C-tab> <ESC>:tabnext<cr>i
 :imap <C-t> <ESC>:tabnew<cr>
 :map <C-e> <ESC>:q!<cr>
-"nnoremap <silent> <tab> :BufExplorer<CR>
+nnoremap <silent> <C-b> :BufExplorer<CR>
 nnoremap <silent> <tab> :Tablisttoggle<CR>
 
 
