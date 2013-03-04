@@ -1,4 +1,4 @@
-colo desert
+color railscasts
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 set expandtab ts=2 sw=2 ai

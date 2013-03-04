@@ -1,0 +1,20 @@
+#------------------------ruby-------
+snippet pry
+	<% binding.pry %>
+snippet rp
+	<%= render partial: '${1:form}' %>
+snippet rpc
+	<%= render partial: '${1:form}', collection: @${2:variable} %>
+snippet dr
+	$(document).ready(function() {
+		
+	});
+snippet ajax
+	$.ajax({
+		type: '${1:get}',
+		url: url
+	});
+snippet $f
+	$('${1:TagName}').${2:function};
+snippet $rp
+	$('${1:TagName}').html("<%= j(render partial: '${2:form}') %>");

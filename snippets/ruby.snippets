@@ -265,7 +265,7 @@ snippet pry
 snippet rt
 	redirect_to
 snippet rp
-	render :partial => 'form.html'
+	render partial: 'form.html'
 # --------------------------------------------------  RSPEC  ----------------------------------------------------------
 
 snippet rsrt
@@ -287,11 +287,11 @@ snippet it
 		${2:test body}
 	end
 snippet let
-	let(:${1:user}) {Factory.create(:${2:user})}
+	let(:${1:user}) { FactoryGirl.create(:${2:user}) }
 snippet Fc
-	Factory.create(:${1:user})${2}
+	FactoryGirl.create(:${1:user})${2}
 snippet Fb
-	Factory.build(:${1:user})${2}
+	FactoryGirl.build(:${1:user})${2}
 snippet Fd
 	Factory.define :${1:user} do |${2:u}|
 		${3}
@@ -300,15 +300,15 @@ snippet rsbs
 	response.should be_success
 # --------------------------------------------------  CONTROLLERS ----------------------------------------------------------
 snippet rl
-	render :layout => '${1:application}'
+	render layout: '${1:application}'
 snippet rlf
-	render :layout => false
+	render layout: false
 snippet rp
-	render :partial => :${1:user}
+	render partial: :${1:user}
 snippet ra
-	render :action => :${1:index}
+	render action: :${1:index}
 snippet rnt
-	render :nothing => true
+	render nothing: true
 snippet bf
 	before_filter ${1}
 # --------------------------------------------------  MODELS ----------------------------------------------------------
@@ -317,7 +317,7 @@ snippet bt
 snippet hm
 	has_many :${1:tasks}
 snippet hmt
-	has_many :${1:tasks}, :through => :${2:categories}
+	has_many :${1:tasks}, through: :${2:categories}
 snippet bs
 	before_save :${1:action}
 snippet as

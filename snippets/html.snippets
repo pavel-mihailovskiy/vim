@@ -130,7 +130,7 @@ snippet base
 	<base href="${1}" target="${2}"`Close()`>
 snippet r
 	<br`Close()[1:]`>
-snippet div
+snippet divid
 	<div id="${1:name}">
 		${2}
 	</div>
@@ -154,15 +154,62 @@ snippet fieldset
 
 		${3}
 	</fieldset>
-snippet form
-	<form action="${1:`Filename('$1_submit')`}" method="${2:get}" accept-charset="utf-8">
-		${3}
-
-
-	<p><input type="submit" value="Continue &rarr;"`Close()`></p>
-	</form>
-snippet h1
+#--------------------------------H---------
+snippet h1id
 	<h1 id="${1:heading}">${2:$1}</h1>
+snippet h1
+	<h1><%= ${1:name} %></h1>
+snippet h2
+	<h2><%= ${1:name} %></h2>
+snippet h3
+	<h3><%= ${1:name} %></h3>
+snippet h4
+	<h4><%= ${1:name} %></h4>
+#-----------------------------div-------
+snippet div
+	<div>
+		${1:content}
+	</div>
+#----------------------------list----
+snippet ul
+	<ul>
+		${1:content}
+	</ul>
+snippet ulid
+	<ul id="${1:id}">
+		${2:content}
+	</ul>
+snippet li
+	<li>${1:content}</li>
+#----------------------------links-------
+snippet lnkt
+	<%= link_to t('.${1:field}'), ${2:path} %>
+snippet lnktr
+	<%= link_to t('.${1:field}'), ${2:path}, remote: true %>
+#---------------------------form-------
+snippet form
+	<%= form_for @${1:object} do |f| %>
+
+	<% end %>
+snippet fields_for
+	<%= fields_for @${1:object} do |ff| %>
+
+	<% end %>
+snippet fl
+	<%= f.label t('.${1:field}') %>
+snippet ftf
+	<%= f.text_field :${1:object} %>
+snippet fta
+	<%= f.text_area :${1:object} %>
+snippet ff
+	<%= f.file_field :${1:object} %>
+snippet fcb
+	<%= f.check_box :${1:object} %>
+snippet fselconst
+	<%= f.select :${1:object}, ${1:Constants::Budget::CURRENSY}.map { |key, value| [key, value] } %>
+snippet fsub
+	<%= f.submit t('.${1:field}') %>
+#-----------------------
 snippet input
 	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
 snippet label
@@ -188,16 +235,13 @@ snippet table
 	</table>${4}
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
-
-
-
-# /**********************************************************************************************************************\
-# | 																					  SNIPPETS ADDED BY MY OWN																								 |
-# \**********************************************************************************************************************/
-
 snippet =
 	<%= ${1} %>
 snippet -
 	<% ${1} -%>
 snippet rp
-	render :partial => '${1:form.html}'
+	<%= render partial: '${1:form}' %>
+snippet rpc
+	<%= render partial: '${1:form}', collection: @${2:variable} %>
+snippet pry
+	<% binding.pry %>
