@@ -1,0 +1,28 @@
+snippet rp
+	render partial: :${1:user}
+---------------------------------------------------------LINKS--------------------------------------------------------
+snippet ln
+	link_to t('.${1:name}'), '#'
+snippet lnc
+	link_to t('.${1:name}'), '#', class: ''
+snippet lncr
+	link_to t('.${1:name}'), '#', class: '', remote: true
+snippet lnjs
+	link_to t('.${1:name}'), '#', class: '', onclick: '{2:function}'
+---------------------------------------------------------FORMS--------------------------------------------------------
+snippet fr
+	form_for @${1:variable} do |f|
+snippet lb
+	f.label :${1:attr}
+snippet lbt
+	f.label t('.${1:attr}')
+snippet tf
+	f.text_field :${1:attr}
+snippet tfc
+	f.text_field :${1:attr}, class: '${2:class}'
+snippet ta
+	f.text_area :${1:attr}
+snippet sb
+	f.submit :${1:attr}
+snippet sbc
+	f.submit :${1:attr}, class: '${2:class}'

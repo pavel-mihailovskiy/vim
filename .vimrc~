@@ -1,17 +1,9 @@
-color railscasts
+colo desert
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 set expandtab ts=2 sw=2 ai
 set number
 set ignorecase
-
-" let Vundle manage Vundle
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-" required!
-  Bundle 'gmarik/vundle'
-
-  Bundle 'slim-template/vim-slim'
 
 set cindent
 :map tp :tabprevious<cr>
@@ -19,7 +11,6 @@ set cindent
 :map tl :Tablisttoggle<CR>
 :map tc :tabclose<cr>
 :map tt :tabnew<cr>
-:map te bve
 :map <C-e> <ESC>:q!<cr>
 nnoremap <silent> <C-b> :BufExplorer<CR>
 
