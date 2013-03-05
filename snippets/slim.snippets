@@ -1,28 +1,34 @@
 snippet rp
-	render partial: :${1:user}
----------------------------------------------------------LINKS--------------------------------------------------------
+	= render partial: :${1:user}
+snippet rpc
+	= render partial: :${1:user}, collection: @${2:class}
+#---------------------------------------------------------LINKS--------------------------------------------------------
 snippet ln
-	link_to t('.${1:name}'), '#'
+	= link_to t('.${1:name}'), '#'
 snippet lnc
-	link_to t('.${1:name}'), '#', class: ''
-snippet lncr
-	link_to t('.${1:name}'), '#', class: '', remote: true
+	= link_to t('.${1:name}'), '#', class: ''
+snippet lnktr
+	=	link_to t('.${1:name}'), '#', class: '', remote: true
 snippet lnjs
-	link_to t('.${1:name}'), '#', class: '', onclick: '{2:function}'
----------------------------------------------------------FORMS--------------------------------------------------------
+	= link_to t('.${1:name}'), '#', class: '', onclick: '${2:function}'
+#---------------------------------------------------------FORMS--------------------------------------------------------
 snippet fr
-	form_for @${1:variable} do |f|
-snippet lb
-	f.label :${1:attr}
-snippet lbt
-	f.label t('.${1:attr}')
-snippet tf
-	f.text_field :${1:attr}
-snippet tfc
-	f.text_field :${1:attr}, class: '${2:class}'
-snippet ta
-	f.text_area :${1:attr}
-snippet sb
-	f.submit :${1:attr}
+	= form_for @${1:variable} do |f|
+snippet fl
+	= f.label :${1:attr}
+snippet flt
+	= f.label t('.${1:attr}')
+snippet ftf
+	= f.text_field :${1:attr}
+snippet ftfc
+	= f.text_field :${1:attr}, class: '${2:class}'
+snippet fta
+	= f.text_area :${1:attr}
+snippet ff
+	= f.file_field :${1:attr}
+snippet fs
+	= f.submit :${1:attr}
 snippet sbc
-	f.submit :${1:attr}, class: '${2:class}'
+	= f.submit :${1:attr}, class: '${2:class}'
+snippet pry
+	- binding.pry
