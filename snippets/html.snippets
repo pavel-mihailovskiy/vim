@@ -171,16 +171,18 @@ snippet div
 		${1:content}
 	</div>
 #----------------------------list----
+snippet p
+	<p>${1}</p>
 snippet ul
 	<ul>
-		${1:content}
+		${1}
 	</ul>
 snippet ulid
 	<ul id="${1:id}">
 		${2:content}
 	</ul>
 snippet li
-	<li>${1:content}</li>
+	<li>${1}</li>
 #----------------------------links-------
 snippet lnkt
 	<%= link_to t('.${1:field}'), ${2:path} %>
@@ -209,7 +211,17 @@ snippet fselconst
 	<%= f.select :${1:object}, ${1:Constants::Budget::CURRENSY}.map { |key, value| [key, value] } %>
 snippet fsub
 	<%= f.submit t('.${1:field}') %>
-#-----------------------
+#-----------------------if-----
+snippet if
+	<% if ${1:variable} %>
+
+	<% end %>
+snippet ifelse
+	<% if ${1:variable} %>
+
+	<% else %>
+
+	<% end %>
 snippet input
 	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}"`Close()`>${4}
 snippet label
@@ -238,7 +250,7 @@ snippet textarea
 snippet =
 	<%= ${1} %>
 snippet -
-	<% ${1} -%>
+	<% ${1} %>
 snippet rp
 	<%= render partial: '${1:form}' %>
 snippet rpc

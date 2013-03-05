@@ -5,14 +5,6 @@ set expandtab ts=2 sw=2 ai
 set number
 set ignorecase
 
-" let Vundle manage Vundle
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-" required!
-  Bundle 'gmarik/vundle'
-
-  Bundle 'slim-template/vim-slim'
-
 set cindent
 :map tp :tabprevious<cr>
 :map tn :tabnext<cr>
