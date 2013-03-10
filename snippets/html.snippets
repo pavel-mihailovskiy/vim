@@ -171,6 +171,8 @@ snippet div
 		${1:content}
 	</div>
 #----------------------------list----
+snippet span
+	<span>${1}</span>
 snippet p
 	<p>${1}</p>
 snippet ul
@@ -203,6 +205,8 @@ snippet ftf
 	<%= f.text_field :${1:object} %>
 snippet fta
 	<%= f.text_area :${1:object} %>
+snippet fhf
+	<%= f.hidden_field :${1:odject} %>
 snippet ff
 	<%= f.file_field :${1:object} %>
 snippet fcb
@@ -241,10 +245,26 @@ snippet select
 		<option value="${3:option}">${4:$3}</option>
 	</select>${5}
 snippet table
-	<table border="${1:0}">
-		<tr><th>${2:Header}</th></tr>
-		<tr><th>${3:Data}</th></tr>
-	</table>${4}
+	<table>
+		<tr><th>${1:header}</th></tr>
+		<%= render partial: '${2:row}', collection: @${3:variable} %>
+	</table>
+snippet tr
+	<tr>
+		${1:content}
+	</tr>
+snippet trth
+	<tr>
+		<th>${1:content}</th>
+	</tr>
+snippet trtd
+	<tr>
+		<td>${1:content}</td>
+	</tr>
+snippet th
+	<th></th>
+snippet td
+	<td></td>
 snippet textarea
 	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 snippet =
@@ -257,3 +277,18 @@ snippet rpc
 	<%= render partial: '${1:form}', collection: @${2:variable} %>
 snippet pry
 	<% binding.pry %>
+#-----------------------------js---------
+snippet $
+	$()
+snippet $h
+	$('${1:node}').html("")
+snippet $hrp
+	$('${1:node}').html("<%= j(render partial: '${2:form}') %>")
+snippet $hrpc
+	$('${1:node}').html("<%= j(render partial: '${2:form}', collection: ${3:variable}) %>")
+snippet $r
+	$('${1:node}').replaceWith("")
+snippet $rrp
+	$('${1:node}').replaceWith("<%= j(render partial: '${2:form}') %>")
+snippet $rrpc
+	$('${1:node}').replaceWith("<%= j(render partial: '${2:form}', collection: ${3:variable}) %>")

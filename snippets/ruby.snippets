@@ -286,6 +286,8 @@ snippet it
 	it "should ${1:test something}" do
 		${2:test body}
 	end
+snippet itshould
+	it { should ${1} }
 snippet let
 	let(:${1:user}) { FactoryGirl.create(:${2:user}) }
 snippet Fc
@@ -296,8 +298,22 @@ snippet Fd
 	Factory.define :${1:user} do |${2:u}|
 		${3}
 	end
+snippet context
+	context '#${1}' do
+
+	end
+snippet contextbf
+	context '#${1}' do
+		before { ${2:get} :${3:index} }
+	end
 snippet rsbs
 	response.should be_success
+snippet r_t
+	render_template(:${1:index})
+snippet r_w
+	respond_with(:${1:success})
+snippet a_t
+	assign_to(:${1:variable})
 # --------------------------------------------------  CONTROLLERS ----------------------------------------------------------
 snippet rl
 	render layout: '${1:application}'
