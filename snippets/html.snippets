@@ -187,9 +187,11 @@ snippet li
 	<li>${1}</li>
 #----------------------------links-------
 snippet ln
-	<%= link_to t('.${1:field}'), ${2:path} %>
+	link_to t('.${1:field}'), ${2:path}
+snippet lnc
+	link_to t('.${1:field}'), ${2:path}, class: ${2:class}
 snippet lnktr
-	<%= link_to t('.${1:field}'), ${2:path}, remote: true %>
+	link_to t('.${1:field}'), ${2:path}, remote: true
 #---------------------------form-------
 snippet form
 	<%= form_for @${1:object} do |f| %>
@@ -211,8 +213,10 @@ snippet ff
 	<%= f.file_field :${1:object} %>
 snippet fcb
 	<%= f.check_box :${1:object} %>
-snippet fselconst
-	<%= f.select :${1:object}, ${1:Constants::Budget::CURRENSY}.map { |key, value| [key, value] } %>
+snippet fsmc
+	<%= f.select :${1:object}, ${2:ModelName}.all.map { |mn| [mn.name, mn.id] }, {}, { class: '${3:class}' } %>
+snippet fsconst
+	<%= f.select :${1:object}, ${2:Constants::Budget::CURRENSY}.map { |key, value| [key, value] } %>
 snippet fsub
 	<%= f.submit t('.${1:field}') %>
 #-----------------------if-----
@@ -272,9 +276,9 @@ snippet =
 snippet -
 	<% ${1} %>
 snippet rp
-	<%= render partial: '${1:form}' %>
+	render partial: '${1:form}'
 snippet rpc
-	<%= render partial: '${1:form}', collection: @${2:variable} %>
+	render partial: '${1:form}', collection: @${2:variable}
 snippet pry
 	<% binding.pry %>
 #-----------------------------js---------
@@ -292,3 +296,5 @@ snippet $rrp
 	$('${1:node}').replaceWith("<%= j(render partial: '${2:form}') %>")
 snippet $rrpc
 	$('${1:node}').replaceWith("<%= j(render partial: '${2:form}', collection: ${3:variable}) %>")
+snippet jvf
+	'javascript:void(false);'
