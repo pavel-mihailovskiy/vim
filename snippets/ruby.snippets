@@ -326,6 +326,11 @@ snippet rnt
 	render nothing: true
 snippet bf
 	before_filter ${1}
+snippet rtf
+	respond_to do |format|
+		format.js
+		format.html
+	end
 # --------------------------------------------------  MODELS ----------------------------------------------------------
 snippet bt
 	belongs_to :${1:category}
@@ -343,4 +348,7 @@ snippet va
 	validates :${1:email}
 snippet v
 	validte :${1:method_name}
-	
+snippet sc
+	scope :${1:name}, lambda { where(${2}) }
+snippet scp
+	scope :${1:name}, lambda { |${2:params}| ${3:block} }

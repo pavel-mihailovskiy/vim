@@ -28,6 +28,8 @@ nnoremap <silent> <C-b> :BufExplorer<CR>
 :imap <C-s> <ESC>:w<cr>
 :map <C-a> <esc>ggVG<end>
 :map <C-f> :Rgrep<cr>
+" old syntax hash to json style
+:vmap <C-A-h> :ChangeHashSyntax <CR>
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 :let Grep_Default_Filelist = '*.*' 
