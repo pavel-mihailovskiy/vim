@@ -30,6 +30,8 @@ nnoremap <silent> <C-b> :BufExplorer<CR>
 :map <C-f> :Rgrep<cr>
 " old syntax hash to json style
 :vmap <C-A-h> :ChangeHashSyntax <CR>
+" move selected to partial
+:vmap <C-A-p> :Rextract 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 :let Grep_Default_Filelist = '*.*' 

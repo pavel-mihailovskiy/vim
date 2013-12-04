@@ -1,7 +1,7 @@
 snippet rp
-	= render partial: :${1:user}
+	render partial: :${1:user}
 snippet rpc
-	= render partial: :${1:user}, collection: @${2:class}
+	render partial: :${1:user}, collection: @${2:class}
 #---------------------------------------------------------LINKS--------------------------------------------------------
 snippet lnk
 	link_to t('.${1:name}'), '#'
@@ -13,24 +13,39 @@ snippet lnjs
 	link_to t('.${1:name}'), '#', class: '', onclick: '${2:function}'
 #---------------------------------------------------------FORMS--------------------------------------------------------
 snippet fr
-	= form_for @${1:variable} do |f|
+	form_for @${1:variable} do |f|
 snippet fl
-	= f.label :${1:attr}
+	f.label :${1:attr}
 snippet flt
-	= f.label t('.${1:attr}')
+	f.label t('.${1:attr}')
 snippet ftf
-	= f.text_field :${1:attr}
+	f.text_field :${1:attr}
 snippet ftfc
-	= f.text_field :${1:attr}, class: '${2:class}'
+	f.text_field :${1:attr}, class: '${2:class}'
 snippet fta
-	= f.text_area :${1:attr}
+	f.text_area :${1:attr}
 snippet ff
-	= f.file_field :${1:attr}
+	f.file_field :${1:attr}
 snippet fs
-	= f.submit :${1:attr}
+	f.submit :${1:attr}
 snippet sbc
-	= f.submit :${1:attr}, class: '${2:class}'
+	f.submit :${1:attr}, class: '${2:class}'
 snippet pry
 	- binding.pry
 snippet jvoid
 	'javascript:void(false);'
+#---------------------------------------------------------JS--------------------------------------------------------
+snippet $
+	$()
+snippet $h
+	$('${1:node}').html("")
+snippet $hrp
+	$('${1:node}').html("#{j(render partial: '${2:form}')}")
+snippet $hrpc
+	$('${1:node}').html("#{j(render partial: '${2:form}', collection: ${3:variable})}")
+snippet $r
+	$('${1:node}').replaceWith("")
+snippet $rrp
+	$('${1:node}').replaceWith("#{j(render partial: '${2:form}')}")
+snippet $rrpc
+	$('${1:node}').replaceWith("#{j(render partial: '${2:form}', collection: ${3:variable})}")
