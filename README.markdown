@@ -1,5 +1,4 @@
-Quickly install with:
 
-    git clone git://github.com/msanders/snipmate.vim.git
-	cd snipmate.vim
-	cp -R * ~/.vim
+git clone git@github.com:pavel-mihailovskiy/vim.git ~/.vim
+
+ln -nfs ~/.vim/.vimrc ~/.vimrc
